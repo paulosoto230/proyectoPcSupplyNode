@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+#titulo{
+    background: green;
+    height: 170px;
+}
+
+#inicio,#producto,#login{
+    color: white;
+}
+.fa-solid{
+  color: white;
+  font-size: 28px;
+}
+#bienvenido h1{
+   text-align: center;
+   margin-top: 40px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 35pt;
+   font-weight: bold;
+   color: #1f1f1f;
+}
+#logoSupply{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#Descubre h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35pt;
+    font-weight: bold; 
+    color: #1f1f1f;
+}
+.fila{
+    padding-top: 50px;
+}
+.cuadro{
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 275px;
+    color: white;
+    height: 350px;
+    width: 350px;
+    margin: auto;
+}
+.imagenfilas{
+    height: 350px;
+    width: 350px;
+}
+#filaFooter{
+    margin-top: 150px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#filaFooter h5{
+    
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color:#1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.imagenProducto{
+
+    width: 300px;
+    height: 330px;
+    margin: auto;
+}
+.productoBuscado{
+    margin-top: 40px;
+
+}
+#segundaFilaProducto p{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #1f1f1f;
+    text-align: left;
+}
+#segundaFilaProducto{
+    margin-top: 50px;
+}
+.mejorar .precio{
+
+    color: grey;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mejorar .miniAgregador {
+    height: 50px;
+    width: 200px;
+    outline-style: solid;
+    color: black;
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 3px;
+}
+.numero .numeroAumentador {
+   padding-right: 10px;
+   display: inline-block;
+}
+.numero{
+    font-size: 30px;
+}
+.numero .fa-solid{
+    font-size: 30px;
+    color: green;
+    z-index: -2;
+   content: '';
+   position: relative;
+}
+.botonBajar{
+    background-color: transparent;
+    border: none;
+    padding-left: 25px;
+}
+.botonAumentar{
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+}
+.botonAgregar{
+  margin-left: 220px;
+  margin-top: -50px;
+  display: block;
+}
+.botonAgregar button {
+   height: 50px;
+   width: 400px;
+   background:black;
+   outline: solid;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.redCompra {
+    width: 280px;
+   height: 100px;
+
+}
+.pagoCredito{
+    width: 300px;
+    height: 100px;
+   
+}
+
+.ajustar{
+   margin-left: 20px;
+}
+
+.btnPagar{
+    margin-left: 450px;
+  
+}
+.btnSeguirComprando{
+    margin-left: 300px
+}
+.btnSeguirComprando button{
+
+    background-color: transparent;
+    border-radius: 15px;
+}
+.btnSeguirComprando button:hover{
+
+    color: gray;
+    cursor: pointer;
+}
+.btnPagar button{
+
+    width: 167px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: green;
+    color: white;
+    border-radius: 15px;
+}
+.imagenTabla{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+.cardImagen{
+
+    margin: auto;
+}
+
+.nombreProducto p{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btnAcciones{
+    margin-top: 30px;
+}
+.btnAcciones button{
+    background-color: transparent;
+    border: none;
+}
+.cantidadActualizar{
+    width: 100px;
+}
+.btnActualizar i{
+   color: green;
+   z-index: -2;
+   content: '';
+   position: relative;
+}
+.btnEliminar i{
+    color: red;
+    z-index: -2;
+    content: '';
+    position: relative;
+}
+.encabezadoTabla th{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tarjeta:hover{
+    text-shadow: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    -webkit-transform: scale(1.1) !important;
+    -ms-transform: scale(1.1) !important;
+    transform: scale(1.1) !important;
+    z-index: 2;
+}
+.vinculoCard{
+
+    text-decoration: none;
+}

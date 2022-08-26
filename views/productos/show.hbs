@@ -1,0 +1,53 @@
+
+<div class="container-fluid">
+<div class="row productoBuscado">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+        <div class="card " style="width: 35rem; height:30rem">
+        <img class="card-img-top imagenProducto" id= "imagenBuscada" src="{{productoBuscado.imagen}}" alt="">
+    </div>
+    </div>
+ <div class="col-md-4" id="segundaFilaProducto">
+   <p>{{productoBuscado.marca}}-{{productoBuscado.modelo}}<p>
+     <div class="mejorar">
+        <p class="precio">{{productoBuscado.precio}}<p>
+        <p>stock:{{productoBuscado.stock}} <p>
+        <div class="row miniAgregador">
+            <div class="numero">
+                <div class="numeroAumentador">
+                  <p id="numeroCarrito">1</p> 
+                </div>
+                <button class="botonBajar" type="button"> 
+                    <span class="fa-solid fa-circle-minus"></span>
+                </button>
+                <button class="botonAumentar"><i class="fa-solid fa-circle-plus"></i></button>
+            </div> 
+        </div> 
+    </div>  
+         <div class=" botonAgregar" >
+                <button type="button" class="agregoAlCarro"
+                 data-id="{{productoBuscado._id}}" data-precio="{{productoBuscado.precio}}"
+                 data-marca="{{productoBuscado.marca}}" data-modelo="{{productoBuscado.modelo}}"
+                 data-imagenes="{{productoBuscado.imagen}}"
+                >AGREGAR AL CARRITO</button>  
+        </div>
+    <div class="row">
+        <img class="redCompra" src="https://www.pcfactory.cl/public/foto/medio_pago/redcompra.svg">
+        <img class="pagoCredito"  src="https://www.pcfactory.cl/public/foto/medio_pago/credito.svg">
+        <img>
+    </div>
+</div>
+</div>
+</div>
+
+   
+
+
+
+
+
+
+
+
+    

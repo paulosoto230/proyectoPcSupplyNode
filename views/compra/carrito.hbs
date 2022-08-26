@@ -1,0 +1,119 @@
+
+
+<section>
+<h1> CARRITO DE COMPRAS</h1>
+<H1 class="eliminar"> !NO TIENE PRODUCTOS AGREGADOS </H1>
+</section>
+
+
+<section class="container mt-3">
+<table class="table table-bordered"  >
+   <thead id="tablaProductos">
+
+   </thead>
+
+  <tbody class="tbody" id="sectionTabla">
+   
+  </tbody>
+</table>
+
+
+</section>
+
+<div class="container-fluid" id="ultimoPrecio">
+
+
+
+</div>
+
+<template id="templateThead">
+
+    <tr class="encabezadoTabla">
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre del Producto</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio por unidad</th>
+      <th scope="col">Precio total </th>
+    </tr>
+</template>
+
+<template id="templateFooter">
+<div class="row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-2">
+     <table class="table table-bordered ajustar">
+        <thead>
+            <tr>
+                <th>subtotal</th>
+                <th class="subtotal">$25.000</th>
+            </tr>
+            <tr>
+                <th>total</th>
+                <th class="total">$250.000</th>
+            </tr>
+        </thead>
+     </table>
+    </div>
+    <div class="col-md-1">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 ">
+      <form action="/producto" method="get">
+       <div class="btnSeguirComprando">
+         <button type="submit"> Continuar comprando</button>
+       </div>  
+      </form>      
+    </div>
+    <div class="col-md-6">
+      <form method="get" action="/compra">
+        <div class="btnPagar">
+            <button type="submit"> Pagar</button>
+        </div>
+      </form>           
+    </div>
+</div>
+</template>
+
+<template id="tablaTemplate">
+
+   <tr>
+      <th scope="row">
+        <div class="card cardImagen" style="width: 5rem; height:5rem">
+             <img class="card-img-top imagenTabla"src="https://www.pcfactory.cl/public/foto/41365/1_500.jpg?t=1639599406637?w=500&h=500" alt="">
+        </div>
+      </th>
+      <td> 
+        <div class="nombreProducto">
+         <p> HP-Notebooks X415 14" FHD Intel i3-1005G1 8GB 256GB SSD Windows 11 Slate Grey X415JA-EB1756W</p> 
+        </div>
+      </td>
+      <td>
+      <div class="btnAcciones row">
+        <div class="col-sm-5">
+                   <input type="number" class="cantidadActualizar">
+        </div>
+        <div class="col-sm-2">
+           <button class="btnActualizar"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+         <div class="col-md-1">
+              <button class="btnEliminar"><i class="fa-solid fa-trash-can"></i></button>
+         </div>
+        </div>
+      </td>
+      <td class="precioUnidad" ></td>
+      <td class="precioTotal"></td>
+    </tr>
+</template>
+
+<template id="tablaMenu">
+
+</template>
+
+<template id="templateTbody">
+ 
+</template>
+
+<script src="/js/pintarCarrito.js"></script>
+

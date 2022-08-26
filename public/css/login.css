@@ -1,0 +1,88 @@
+
+.botonsito{
+    margin-top: 15px;
+    border: none;
+    color: white;
+    width: 220px;
+    background-color: #1f1f1f;
+    border-radius: 0px;
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+button:hover{
+    border: none;
+    color: white;
+    background-color: #32CD32;
+    border-radius: 0px;
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.botonRegistrar{
+
+    margin-top: 10px;
+    border: none;
+    color: white;
+    width: 220px;
+    background-color: #1f1f1f;
+    border-radius: 0px;
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+.botonRegistro{
+
+    margin-left: 80px;
+}
+
+.posi{
+    position: absolute;
+}
+.login{
+    margin-left: 10px;
+
+    background: none;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-color: #32CD32;
+    outline: none;
+}
+.cuadrologin{
+    text-align: center;
+ 
+}
+.cuadroRegister{
+    margin: auto;
+}
+
+.cuadroRow{
+
+    margin-top: 60px;
+}
+
+label{
+    position: relative;
+}
+h2{
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 25pt;  
+    font-weight: bold;
+    padding-bottom: 35px;
+}
+.noregis{
+    margin-left: 75px;
+}
+.pading{
+    padding-bottom: 35px;
+    color: white;
+}
+.noTienesCuenta:link, .noTienesCuenta:visited,.noTienesCuenta:hover,.noTienesCuenta:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+

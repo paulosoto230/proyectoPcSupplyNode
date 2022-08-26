@@ -1,0 +1,26 @@
+
+ <link rel="stylesheet" type="text/css" href="/css/login.css">
+
+<div class="container-fluid">
+            <form method="post" action="/login">
+                <div class="row cuadroRow">
+                    <div class="cuadrologin">
+                        <div><h2>Iniciar sesión.</h2></div>
+                        <input class="login" type="email" name="email" id="email" required="" size="23" maxlength="30" placeholder="E-mail"/>
+                        <div class="textError" id="errorUsuario"></div>
+                        <br>
+                        <input class="login" type="password" name="password" required="" id="contraseña" size="23" maxlength="30" placeholder="Contraseña"/>
+                        <div class="textError" id="errorContraseña"></div>
+                        <br>
+                        <a class="noregis" href="/login/registro">¿Olvidaste tu contraseña?.</a>
+                        <br>
+                        <button class="botonsito" type="submit" value="entrar" name="action">Aceptar</button>
+                        <div>
+                         <button class="botonRegistrar" type="submit" value="entrar" name="action"><a class="noTienesCuenta" 
+                         href="/login/registro">¿No tienes cuenta?Registrate</a></button>
+                        </div>  
+                    </div>
+                </div>
+            </form>
+</div>
+

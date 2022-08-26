@@ -1,0 +1,66 @@
+
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-3">
+         <div>
+   <p> filtrar por: </p> 
+    <select class="form-select" name="selector" id="filtrador">
+        <option value="-1"> Seleccionar categoria</option>
+        {{#each categorias}}
+        <option class="optiones" value={{_id}} data-idCategoria="{{_id}}">{{nombre}}</option>
+        {{/each}}
+    </select>
+    </div>
+    </div>
+</div>
+
+</div>
+<div class="container my-5">
+<div class="row" id="card-dinamicas">
+       {{#each resultado}}
+          <article class="col-12 col-md-6 col-lg-3 mb-3">
+               <div class="card text-center shadow tarjeta">
+                <p class="lead text-secondary">{{marca}}</p>
+                {{#each listaProductos}}
+                    <p class="lead text-secondary">{{nombre}}</p> 
+                {{/each}}
+               <a class="vinculoCard verProducto" href="producto/ver/{{_id}}"> <img src="{{imagen}}" alt="" class="card-img-top" id="imagen"></a> 
+                <div class="card-body">
+                     <h5 class="card-title text-primary lead" id="precio">$ {{precio}}</h5>
+                     <button class="btn btn-primary agregarProducto"
+                            data-id="{{_id}}" data-precio="{{precio}}"
+                            data-marca="{{marca}}" data-modelo="{{modelo}}"
+                            data-imagenes="{{imagen}}"
+                            id="boton">
+                        Agregar carrito
+                    </button>
+              </div>
+        </div>
+    </article>  
+    {{/each}} 
+    </div>
+</div>
+
+<template id="templateCard">
+     <article class="col-12 col-md-6 col-lg-3 mb-3">
+               <div class="card text-center shadow tarjeta">
+                <p class="lead text-secondary" id="marca"></p>
+                <p class="lead text-secondary" id="nombreCategoria"></p> 
+               <a class="vinculoCard verProducto" href=""> <img src="" alt="" class="card-img-top" id="imagen"></a> 
+                <div class="card-body">
+                     <h5 class="card-title text-primary lead" id="precio">$ </h5>
+                     <button class="btn btn-primary agregarProducto"
+                            id="boton">
+                        Agregar carrito
+                    </button>
+              </div>
+        </div>
+    </article>  
+</template>
+
+
+
+
+
