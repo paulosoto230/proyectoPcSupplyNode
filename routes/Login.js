@@ -1,5 +1,5 @@
 const express = require('express');
-const { redirectLogin, redirectRegister, registerUser, loginUser } = require('../Controllers/LoginControllers');
+const { redirectLogin, redirectRegister, registerUser, loginUser, confirmarCuenta } = require('../Controllers/LoginControllers');
 const {body} = require('express-validator') 
 const router = express.Router();
 const expresiones = {
@@ -42,5 +42,7 @@ body("email", "ingrese un email válido").trim().isEmail().normalizeEmail(),
 body("password", "contraseña minimo de 6 carácteres").trim().escape()
 
 ],loginUser)
+router.get("/confirmarCuenta/:token", confirmarCuenta)
+
 
 module.exports = router

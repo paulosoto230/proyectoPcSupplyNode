@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 const { create } = require("express-handlebars");
 require('dotenv').config()
 require('./Database/Db')
+const passport = require('passport');
+const ModelsUser = require('./Models/ModelsUser');
 
 app.use(sessions({
     secret: 'seguridad',
@@ -15,7 +17,17 @@ app.use(sessions({
 }))
 // flash se ocupa para los mensajes al usuario
 app.use(flash())
+// se ocupa para mantener iniciada las sesion de un usuario
+app.use(passport.initialize())
+app.use(passport.session())
 
+passport.serializeUser((user,done) => done(null, {id: user._id, userName: user.nombre}))
+
+passport.deserializeUser( async(user,done) => {
+const usuarioBuscado = await ModelsUser.findById(user.id)
+return done(null, {id: user.id, userName: user.userName})
+
+})
 
 const hbs = create({
     extname: ".hbs",
