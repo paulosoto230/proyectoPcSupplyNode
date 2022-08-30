@@ -3,8 +3,8 @@ const modeloCategoria = require("../Models/ModelsCategory")
 const mongose = require('mongoose')
 const { json } = require("express")
 const ObjectId = mongose.Types.ObjectId;
-const listarProductos = async(req,res) => {
-    
+
+const listarProductos = async(req,res) => {    
     try {
         // se llama al elemento padre en este caso modeloProducto 
         let resultado = await modeloProducto.aggregate(
@@ -25,7 +25,7 @@ const listarProductos = async(req,res) => {
          return item
        })
        const categorias = await modeloCategoria.find().lean()
-
+      
         res.render('productos/index.hbs',{resultado: resultado, categorias:categorias})    
     } catch (error) {
         console.log(error)

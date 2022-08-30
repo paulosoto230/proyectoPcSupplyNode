@@ -27,11 +27,19 @@
                 <a class="nav-link" href="/producto" id="producto">PRODUCTOS</a>
             </li>    
          </form>
+         {{#if devolver}}
          <form method="" action="">
             <li class="nav-item">
-                <a class="nav-link" href="/login" id="login">LOGIN</a>
+                <a class="nav-link" href="/login/logout" id="login">CERRAR SESIÓN </a>
             </li>
          </form>
+         {{else}}
+        <form method="" action="">
+            <li class="nav-item">
+                <a class="nav-link" href="/login" id="login">INICIAR SESIÓN</a>
+            </li>
+         </form>
+         {{/if}}
             <li class="nav-item">
                 <a class="nav-link" href="/producto/carrito" id="login">CARRITO</a>
             </li>

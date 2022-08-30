@@ -26,7 +26,6 @@ passport.serializeUser((user,done) => done(null, {id: user._id, userName: user.n
 passport.deserializeUser( async(user,done) => {
 const usuarioBuscado = await ModelsUser.findById(user.id)
 return done(null, {id: user.id, userName: user.userName})
-
 })
 
 const hbs = create({
@@ -37,6 +36,7 @@ app.engine(".hbs", hbs.engine);
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 app.use(express.urlencoded({ extended: true }));
+
 app.use(bodyParser.json())
 app.use("/", require('./routes/home'))
 app.use("/producto", require('./routes/product'))

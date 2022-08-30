@@ -101,9 +101,15 @@ const createTrans = () => {
    return transport
 }
 
-
-
-
+const cerrarSesion = (req,res) => {
+   
+   req.logout(function (err) {
+       if (err) {
+         return next(err);
+       }
+       res.redirect("/");    
+     });
+}
 
 
 module.exports = {
@@ -112,4 +118,5 @@ module.exports = {
    registerUser,
    loginUser,
    confirmarCuenta,
+   cerrarSesion,
 }
