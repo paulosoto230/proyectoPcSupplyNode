@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator")
 const nodemailer = require('nodemailer')
 const nodemailerSengrid = require('nodemailer-sendgrid')
 const plantillaEmail = require('../plantillaEmail/plantillaEmail')
-
+require('dotenv').config()
 
 
 
@@ -95,7 +95,7 @@ const sendEmail = async (user) => {
 const createTrans = () => {    
      const transport = nodemailer.createTransport(
        nodemailerSengrid({
-           apiKey: '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'
+           apiKey: process.env.apiKey
        })
      )
    return transport
