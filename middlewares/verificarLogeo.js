@@ -3,7 +3,6 @@ module.exports = (req,res,next) => {
     if(req.isAuthenticated()){
          devolver = true
     }
-    console.log(devolver)
     res.locals.devolver = devolver
     next()
   }

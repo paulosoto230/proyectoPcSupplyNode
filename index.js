@@ -21,11 +21,11 @@ app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
 
-passport.serializeUser((user,done) => done(null, {id: user._id, userName: user.nombre}))
+passport.serializeUser((user,done) => done(null, {id: user._id, userName: user.nombre, apellido: user.apellido}))
 
 passport.deserializeUser( async(user,done) => {
 const usuarioBuscado = await ModelsUser.findById(user.id)
-return done(null, {id: user.id, userName: user.userName})
+return done(null, {id: user.id, userName: user.userName, apellido: user.apellido})
 })
 
 const hbs = create({
@@ -43,6 +43,7 @@ app.use("/producto", require('./routes/product'))
 app.use("/categoria", require('./routes/Category'))
 app.use("/login", require('./routes/Login'))
 app.use("/compra", require('./routes/Compra'))
+app.use("/account", require('./routes/Account'))
 app.use(express.static(__dirname + "/public"));
 
 const port = process.env.port || 5000
