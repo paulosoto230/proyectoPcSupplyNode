@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="row">
+         {{>menuAccount}}
+        <div class="col-sm-10">
+             <form method="" action="" class="form-horizontal" id="formulario">
+                <fieldset>
+                    <div class="form-group row">
+                    <label class="col-sm-2 rutLabel">Rut</label>
+                    <div class="col-sm-10" id="inputRut">
+                        <p class="form-control-static">{{usuarioBuscado.rut}}</p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 nombreLabel">Nombre</label>
+                    <div class="col-sm-10" id="inputNombre">
+                           <input class="form-control" value="{{usuarioBuscado.nombre}}" type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 apellidoLabel">Apellidos</label>
+                    <div class="col-sm-10" id="inputApellido">
+                           <input class="form-control" type="text" value="{{usuarioBuscado.apellido}}">
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label class="col-sm-2 correoLabel">Correo</label>
+                    <div class="col-sm-10" id="correoInput">
+                           <input class="form-control" type="email" value="{{usuarioBuscado.email}}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2">Telefono</label>
+                    <div class="col-sm-10" id="">
+                           <input class="form-control" type="number" value="{{usuarioBuscado.telefono}}">
+                    </div>
+                </div>
+                </fieldset>
+                  <div class="buttons clearfix">
+                    <div class="pull-left">
+                           <a class="btn btn-default" href="">Atrás</a>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-primary" id="btnContinuar" type="submit">Continuar</button>
+                    </div>
+                </div>
+               
+             </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/editarUsuario.js"></script>
