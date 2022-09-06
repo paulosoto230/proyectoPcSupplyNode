@@ -1,9 +1,9 @@
-
+ <link rel="stylesheet" type="text/css" href="/css/editarUsuario.css">
 <div class="container">
     <div class="row">
          {{>menuAccount}}
         <div class="col-sm-10">
-             <form method="" action="" class="form-horizontal" id="formulario">
+             <form method="post" action="/account/editAccount" class="form-horizontal" id="formulario" data-usuario="{{usuarioBuscado}}">
                 <fieldset>
                     <div class="form-group row">
                     <label class="col-sm-2 rutLabel">Rut</label>
@@ -11,30 +11,43 @@
                         <p class="form-control-static">{{usuarioBuscado.rut}}</p>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="grupo__nombre">
                     <label class="col-sm-2 nombreLabel">Nombre</label>
                     <div class="col-sm-10" id="inputNombre">
-                           <input class="form-control" value="{{usuarioBuscado.nombre}}" type="text">
+                           <input class="form-control" name="nombre" value="{{usuarioBuscado.nombre}}" type="text">
+                           <div class="text-danger correcto"> El nombre no puede tener caracteres o estar vacío</div>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="grupo__apellido">
                     <label class="col-sm-2 apellidoLabel">Apellidos</label>
                     <div class="col-sm-10" id="inputApellido">
-                           <input class="form-control" type="text" value="{{usuarioBuscado.apellido}}">
+                           <input class="form-control" name="apellido" type="text" value="{{usuarioBuscado.apellido}}">
+                           <div class="text-danger correcto"> El nombre no puede tener caracteres o estar vacío</div>
                     </div>
                 </div>
-                    <div class="form-group row">
+                    <div class="form-group row" id="grupo__correo">
                     <label class="col-sm-2 correoLabel">Correo</label>
                     <div class="col-sm-10" id="correoInput">
-                           <input class="form-control" type="email" value="{{usuarioBuscado.email}}">
+                           <input class="form-control" name="email" type="email" value="{{usuarioBuscado.email}}">
+                           <div class="text-danger correcto"> El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</div>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="grupo__telefono">
                     <label class="col-sm-2">Telefono</label>
                     <div class="col-sm-10" id="">
-                           <input class="form-control" type="number" value="{{usuarioBuscado.telefono}}">
+                           <input class="form-control" name="telefono" type="number" value="{{usuarioBuscado.telefono}}">
+                           <div class="text-danger correcto">El telefono solo puede contener numeros y el maximo son 9 dígitos</div>
                     </div>
                 </div>
+                <div class="row">
+
+                       <div class="col-sm-12">
+                 <div class="formulario__mensaje" id="formulario__mensaje">
+				            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+		    	</div>
+                       </div> 
+                </div>
+
                 </fieldset>
                   <div class="buttons clearfix">
                     <div class="pull-left">

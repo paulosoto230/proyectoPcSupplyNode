@@ -1,0 +1,64 @@
+.form-group label {
+    padding-left: 80px;
+    padding-top: 23px;
+}
+
+.form-group .col-sm-10 {
+
+    padding-top: 20px;
+}
+
+.buttons .pull-right {
+    float: right;
+    position: relative;
+    margin-top: 40px;
+}
+.buttons .pull-left {
+    float: left;
+    position: relative;
+    margin-top: 40px;
+}
+.form-group .correcto{
+    display: none
+}
+
+.formulario_input_correcto input{
+    border: 3px solid #1ed12d;
+    opacity: 1;
+}
+
+.formulario_input_incorrecto input {
+    border: 3px solid #bb2929;
+    opacity: 1;
+}
+
+.formulario_correcto .correcto{
+   display: none;
+}
+
+.formulario_incorrecto .correcto{
+    display: block;
+    color: red;
+}
+
+.form-group input {
+	transition: .3s ease all;
+}
+
+.form-group input:focus {
+	outline: none;
+}
+
+#formulario .formulario__mensaje{
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+    margin-top: 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+#formulario .formulario__mensaje-activo {
+	display: block;
+}

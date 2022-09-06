@@ -256,25 +256,8 @@ body{
     text-transform: uppercase;
 }
 
-.form-group label {
-    padding-left: 80px;
-    padding-top: 23px;
-}
 
-.form-group .col-sm-10 {
 
-    padding-top: 20px;
-}
 
-.buttons .pull-right {
-    float: right;
-    position: relative;
-    margin-top: 40px;
-}
-.buttons .pull-left {
-    float: left;
-    position: relative;
-    margin-top: 40px;
-}
 
 
